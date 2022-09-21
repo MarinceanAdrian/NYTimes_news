@@ -17,8 +17,8 @@ const Form = () => {
 
   const signIn = async (e) => {
     e.preventDefault();
-    const { displayName, email, accessToken } = await signInWithFirebase();
-    authContext.loginHandler({ displayName, email, accessToken });
+    const user = await signInWithFirebase();
+    authContext.loginHandler({ displayName: user.displayName, email: user.email, accessToken: user.accessToken });
     // navigate back to home after authentication
     navigate("/", { replace: true });
   };

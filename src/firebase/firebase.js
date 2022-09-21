@@ -22,7 +22,7 @@ const provider = new GoogleAuthProvider();
 export const signInWithFirebase = async () => {
   try {
     const user = await signInWithPopup(auth, provider);
-    console.log(user.user);
+    console.log('signInWithPopup', user);
     return user.user;
   } catch (err) {
     console.log("firebase fetching error", err);
