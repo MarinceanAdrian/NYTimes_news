@@ -20,7 +20,7 @@ const Modal = (props) => {
             displayText="Dismiss"
             type="text"
             clickHandler={props.onDisplay}
-            dismissClass={props.authModal || props.homeModal && classes.dismissBtn}
+            dismissClass={true}
           />
           {props.authModal && !props.homeModal && (
             <Button

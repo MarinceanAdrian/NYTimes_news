@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "@firebase/auth";
 import { signInWithFirebase } from "../../../firebase/firebase";
 import AuthContext from "../../../context/AuthContext/auth-context";
 import themeContext from "../../../context/ThemeContext/theme-context";
+import Footer from "../../UI/Footer";
 
 const Form = () => {
   const authContext = useContext(AuthContext);
@@ -23,27 +24,30 @@ const Form = () => {
   };
 
   return (
-    <form className={classes.form}>
-      <span className={classes["team__icon"]}>
-        <i class="fas fa-users"></i>
-      </span>
-      <h2>Become a member!</h2>
-      <div className={classes["form__control"]}>
-        <label htmlFor="name">Name</label>
-        <input name="name" id="name" type="text" disabled />
-      </div>
-      <div className={classes["form__control"]}>
-        <label htmlFor="email">Email</label>
-        <input name="email" id="email" type="email" disabled />
-      </div>
-      <button
-        onClick={signIn}
-        type="button"
-        className={classes["login-with-google-btn"]}
-      >
-        Sign In with Google
-      </button>
-    </form>
+    <>
+      <form className={classes.form}>
+        <span className={classes["team__icon"]}>
+          <i class="fas fa-users"></i>
+        </span>
+        <h2>Become a member!</h2>
+        <div className={classes["form__control"]}>
+          <label htmlFor="name">Name</label>
+          <input name="name" id="name" type="text" disabled title="Not available at the moment, use Google Auth instead"/>
+        </div>
+        <div className={classes["form__control"]}>
+          <label htmlFor="email">Email</label>
+          <input name="email" id="email" type="email" disabled title="Not available at the moment, use Google Auth instead"/>
+        </div>
+        <button
+          onClick={signIn}
+          type="button"
+          className={classes["login-with-google-btn"]}
+        >
+          Sign In with Google
+        </button>
+      </form>
+      <Footer />
+    </>
   );
 };
 

@@ -33,7 +33,7 @@
   gap: 1rem;
 }
 
-.dismissBtn {
+/* .dismissBtn {
   border: 2px solid #4e3311;
   background: transparent;
   color: #4e3311;
@@ -42,7 +42,7 @@
 .dismissBtn:hover {
   border: 2px solid #b0916a;
   color: #b0916a;
-}
+} */
 
 input[type="email"] {
   padding: .3rem .2rem;

@@ -10,7 +10,19 @@
 }
 
 .btn:hover {
-  background: white;
-  color: #4e3311;
+  background: #95744a;
+  color: #fff;
+  border: 2px solid #95744a;
+}
+
+.dismissBtn {
   border: 2px solid #4e3311;
+  background: transparent;
+  color: #4e3311;
+}
+
+.dismissBtn:hover {
+  border: 2px solid #b0916a;
+  color: #b0916a;
+  background: transparent;
 }
