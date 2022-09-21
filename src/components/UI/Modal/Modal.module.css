@@ -49,6 +49,8 @@ input[type="email"] {
   border-radius: .3rem;
   border: 1px solid saddlebrown;
   font-family: inherit;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 @keyframes modalIntro {

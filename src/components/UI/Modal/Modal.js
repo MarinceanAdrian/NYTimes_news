@@ -20,7 +20,7 @@ const Modal = (props) => {
             displayText="Dismiss"
             type="text"
             clickHandler={props.onDisplay}
-            dismissClass={props.authModal && classes.dismissBtn}
+            dismissClass={props.authModal || props.homeModal && classes.dismissBtn}
           />
           {props.authModal && !props.homeModal && (
             <Button
@@ -58,7 +58,10 @@ const ModalOutput = () => {
         <p>{modalCtx.modalTextBody.body}</p>
         {/* conditionally render the email input */}
         {modalCtx.homeModal && (
+          <div style={{width: '13rem'}}>
+            
           <input type="email" placeholder="yourEmail@email.com" />
+          </div>
         )}
       </Modal>
       <Backdrop onDisplay={() => modalCtx.closeModalHandler()} />
