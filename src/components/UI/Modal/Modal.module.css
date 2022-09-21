@@ -1,0 +1,62 @@
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(78, 78, 78, 0.3);
+  transition: all 0.4s linear;
+}
+
+.modal-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  position: absolute;
+  z-index: 200;
+  top: 5%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.55rem;
+  padding: 1rem 2rem;
+  width: 85vw;
+  max-width: 35rem;
+  animation: modalIntro 0.4s linear forwards;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.dismissBtn {
+  border: 2px solid #4e3311;
+  background: transparent;
+  color: #4e3311;
+}
+
+.dismissBtn:hover {
+  border: 2px solid #b0916a;
+  color: #b0916a;
+}
+
+input[type="email"] {
+  padding: .3rem .2rem;
+  border-radius: .3rem;
+  border: 1px solid saddlebrown;
+  font-family: inherit;
+}
+
+@keyframes modalIntro {
+  from {
+    top: 3%;
+  }
+
+  to {
+    top: 5%;
+  }
+}

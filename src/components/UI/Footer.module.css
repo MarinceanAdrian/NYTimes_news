@@ -1,0 +1,28 @@
+.footer {
+  display: grid;
+  place-items: center;
+  align-items: flex-end;
+  gap: .7rem;
+  height: 9rem;
+  width: 100vw;
+  background: black;
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.social {
+  align-self: flex-start;
+  display: flex;
+  gap: .8rem;
+}
+
+.social span {
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+.social span:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

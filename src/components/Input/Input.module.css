@@ -1,0 +1,28 @@
+.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 13rem auto 4rem auto;
+  background-color: #262a2b;
+  color: whitesmoke;
+  width: 90vw;
+  max-width: 28rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.select__news {
+  width: 100%;
+  background-color: #262a2b;
+  color: white;
+  font-family: inherit;
+  padding: 0.55rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .search-input {
+    margin: 10rem auto 4rem auto;
+  }
+}

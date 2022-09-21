@@ -1,0 +1,19 @@
+@media screen and (min-width: 699px) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .movie-list--wrapper {
+    margin: 0 auto;
+    width: 70vw;
+    max-width: 70rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .movie-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

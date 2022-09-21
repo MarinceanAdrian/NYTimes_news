@@ -1,0 +1,92 @@
+.header {
+  background-color: #4e3311;
+  color: white;
+  padding: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 50;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    flex-direction: row;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.header__title a {
+  font-family: "Lobster Two", cursive;
+  background-color: whitesmoke;
+  padding: 0.35rem;
+  color: #262a2b;
+  border-radius: 0.55rem;
+  font-size: 2rem;
+  margin-bottom: 0.55rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .header__title {
+    margin: 0;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+.header__nav--list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav--list {
+    flex-direction: row;
+  }
+}
+
+.header__nav--list-item {
+  transition: var(--transition);
+}
+
+.header__nav--list-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 3px 0 0 rgba(216, 216, 216, 0.4);
+}
+
+.dark__mode {
+  display: none;
+}
+/* DARK MODE */
+@media screen and (min-width: 799px) {
+  .dark__mode {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.15rem;
+    border-radius: 0.35rem;
+    transition: all 0.3s linear;
+  }
+}

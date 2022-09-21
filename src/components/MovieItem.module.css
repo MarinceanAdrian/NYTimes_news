@@ -1,0 +1,169 @@
+/* ARTICLE AND COVER - GENERAL */
+.article,
+.skeleton {
+  background: white;
+  width: 90vw;
+  max-width: 20rem;
+  height: 25rem;
+  margin: 1rem auto auto auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 0.55rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.article {
+  transition: all 0.3s linear;
+}
+
+.cover,
+.skeleton-cover {
+  max-height: 10rem;
+}
+
+/* CARD DETAILS */
+.details {
+  width: 90%;
+  padding: 1rem;
+}
+
+.details h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.details p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  line-height: 1.5rem;
+  color: rgb(77, 77, 77);
+  overflow: hidden;
+}
+
+.details span {
+  color: lightgray;
+  font-size: 0.75rem;
+  padding-bottom: 0;
+  position: absolute;
+  bottom: 3px;
+}
+
+/* Read later Icon */
+.read-later__icon {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(202, 202, 202);
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.read-later__icon:hover {
+  color: white !important;
+}
+
+/* HVOER OVERLAY */
+.hover-overlay {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.hover-overlay a {
+  transform: translateY(-20px);
+}
+
+.hover-overlay a:hover {
+  background: white;
+  color: gray;
+}
+
+.hover-overlay.dark .dark:hover {
+  background: rgb(71, 71, 71);
+  color: lightgray;
+}
+
+.article:hover .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(93, 93, 93, 0.8);
+  opacity: 1;
+}
+
+.article:hover .read-later__icon {
+opacity: 1;
+}
+
+.article:hover {
+  transform: scale(1.02);
+}
+
+.article:hover a {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+/* SKELETON EFFECT */
+.skeleton-cover {
+  background: gray;
+  position: relative;
+  z-index: 20;
+}
+
+.skeleton::after {
+  content: "";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgb(185, 185, 185) 25%,
+    rgb(172, 172, 172) 50%,
+    rgb(195, 195, 195) 100%
+  );
+  filter: blur(5px);
+  animation: loadingSkeletonEffect 2s linear infinite;
+}
+
+.skeleton-cover::after {
+  content: "";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgb(182, 182, 182) 25%,
+    rgb(131, 131, 131) 50%,
+    rgb(175, 175, 175) 100%
+  );
+  filter: blur(5px);
+  animation: loadingSkeletonEffect 2s linear infinite;
+}
+
+@keyframes loadingSkeletonEffect {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
