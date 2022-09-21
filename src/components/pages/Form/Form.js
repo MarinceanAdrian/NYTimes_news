@@ -4,9 +4,13 @@ import classes from "./Form.module.css";
 import { onAuthStateChanged } from "@firebase/auth";
 import { signInWithFirebase } from "../../../firebase/firebase";
 import AuthContext from "../../../context/AuthContext/auth-context";
+import themeContext from "../../../context/ThemeContext/theme-context";
 
 const Form = () => {
   const authContext = useContext(AuthContext);
+
+  // TODO - make the sign-in card change color on dark theme
+  const theme = useContext(themeContext);
 
   let navigate = useNavigate();
 

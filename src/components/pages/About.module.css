@@ -1,9 +1,13 @@
 .about {
   margin: 10rem auto auto 2rem;
   width: 100%;
-  height: calc(100% - 368px);
+  height: calc(100vh - 368px);
 }
 
 .about h2 {
   padding-bottom: 1.25rem;
+}
+
+.darken {
+  color: whitesmoke;
 }
